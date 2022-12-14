@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class bank {
     //declare variables
     private String firstName;
@@ -6,7 +8,18 @@ public class bank {
     private int lastTransactionAmount;
 
     //create constructor for first and last name
+    public bank() {
+        Scanner scan = new Scanner(System.in);
 
+        System.out.println("Enter your first name: ");
+        this.firstName = scan.nextLine();
+
+        System.out.println("Enter your last name: ");
+        this.lastName = scan.nextLine();
+
+
+
+    }
     //check balance
 
     //make deposit
