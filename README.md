@@ -1,5 +1,6 @@
 # bankingApp
 
+<img alt="Console Screenshot" height="10" src="/Users/marieyearup/bankingApp/bankingApp/Project3_Screenshot.png" width="10"/>
 
 ## Project Description
 This project's goal was to create an banking application. It takes in the user's first name and last name. It revels a menu that allows the user to pink from a variety of functions (withdraw, deposit, invest, etc.). 
