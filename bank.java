@@ -91,7 +91,7 @@ public class bank {
 
         //menu
         public void menu() {
-            System.out.println("Welcome " + firstName + " " + lastName + ". Enter the letter that corresponds with what you'd like to do.\n 1. Make a Deposit\n 2. Withdraw\n 3. View Previous Transactions\n 4. Calculate Interest\n 5. View Balance\n 6. Exit");
+            System.out.println("Welcome " + firstName + " " + lastName + ". Enter the number that corresponds with what you'd like to do.\n 1. Make a Deposit\n 2. Withdraw\n 3. View Previous Transactions\n 4. Calculate Interest\n 5. View Balance\n 6. Exit");
 
             Scanner scan = new Scanner(System.in);
             int choice = scan.nextInt();
