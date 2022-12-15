@@ -53,16 +53,16 @@ public class bank {
 
         }
         //check balance
-        private int balanceCheck () {
-            return balance;
+        private void balanceCheck () {
+            System.out.println("BALANCE: $" + balance);
         }
 
         //view previous transactions
         private void viewPreviousTransaction () {
             if (lastTransactionAmount > 0) {
-                System.out.println("LAST TRANSACTION: " + lastTransactionAmount + " was deposited.");
+                System.out.println("LAST TRANSACTION: $" + lastTransactionAmount + " was deposited.");
             } else if (lastTransactionAmount < 0) {
-                System.out.println("LAST TRANSACTION: " + lastTransactionAmount + " was withdrawn.");
+                System.out.println("LAST TRANSACTION: $" + lastTransactionAmount + " was withdrawn.");
 
             } else if (lastTransactionAmount == 0) {
                 System.out.println("No previous transaction.");
@@ -83,13 +83,42 @@ public class bank {
             Scanner scan2 = new Scanner(System.in);
             int years = scan2.nextInt();
 
-            double amountEarnedAfterInterest = (amountToInvest * .08 * years) + amountToInvest;
+            double amountEarned = (amountToInvest * .08 * years);
 
-            System.out.println("You would earn: " + amountEarnedAfterInterest);
+            System.out.println("You would earn: $" + amountEarned);
         }
 
         //menu
+        public void menu() {
+            System.out.println("Welcome " + firstName + " " + lastName + ". Enter the letter that corresponds with what you'd like to do.\n 1. Make a Deposit\n 2. Withdraw\n 3. View Previous Transactions\n 4. Calculate Interest\n 5. View Balance\n 6. Exit");
 
-        //exit application
+            Scanner scan = new Scanner(System.in);
+            int choice = scan.nextInt();
+
+            if(choice == 1) {
+                deposit();
+                menu();
+            }
+            else if (choice == 2) {
+                withdraw();
+                menu();
+            }
+            else if (choice == 3) {
+                viewPreviousTransaction();
+                menu();
+            }
+            else if (choice == 4) {
+                calculateInterest();
+                menu();
+            }else if (choice == 5) {
+                balanceCheck();
+                menu();
+            }else if (choice == 6) {
+
+            }else {
+                System.out.println("ERROR");
+            }
+
+        }
 
     }
