@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class bank {
@@ -7,6 +6,8 @@ public class bank {
     private String lastName;
     private int balance = 0;
     private int lastTransactionAmount;
+
+
 
 
     //create constructor for first and last name
@@ -20,7 +21,7 @@ public class bank {
         System.out.println("Enter your last name: ");
         this.lastName = scan.nextLine();
 
-
+        menu();
 
     }
 
@@ -97,21 +98,26 @@ public class bank {
 
             if(choice == 1) {
                 deposit();
+                System.out.println();
                 menu();
             }
             else if (choice == 2) {
                 withdraw();
+                System.out.println();
                 menu();
             }
             else if (choice == 3) {
                 viewPreviousTransaction();
+                System.out.println();
                 menu();
             }
             else if (choice == 4) {
                 calculateInterest();
+                System.out.println();
                 menu();
             }else if (choice == 5) {
                 balanceCheck();
+                System.out.println();
                 menu();
             }else if (choice == 6) {
 
